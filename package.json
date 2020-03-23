@@ -1,0 +1,25 @@
+{
+  "name": "web app template",
+  "description": "General purpose web app template.",
+  "version": "0.0.1",
+  "license": "MIT",
+  "author": "bidenwarren",
+  "main": "server.js",
+  "scripts": {
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "responsive",
+    "admin",
+    "template",
+    "theme",
+    "framework",
+    "control-panel",
+    "dashboard"
+  ],
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "3.x"
+  }
+}
