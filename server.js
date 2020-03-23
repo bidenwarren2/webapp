@@ -1,9 +1,13 @@
 var express = require('express');
 var app = express();
 
+const port = 3000;
+
 app.use(express.static('public'));
+app.get('/asset/', (req, res) => res.send('Hello World!'))
+app.listen(port, () => console.log(`Master listening on port ${port}!`))
 
-//Serves all the request which includes /images in the url from Images folder
-app.use('/images', express.static(__dirname + '/Images'));
 
-var server = app.listen(5000);
+
+
+
