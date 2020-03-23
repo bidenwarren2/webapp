@@ -1,16 +1,9 @@
-const http = require('http');
+var express = require('express');
+var app = express();
 
-const hostname = '127.0.0.1';
-const port = 3000;
+app.use(express.static('public'));
 
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-});
+//Serves all the request which includes /images in the url from Images folder
+app.use('/images', express.static(__dirname + '/Images'));
 
-server.use(express.static(path.join(__dirname, 'public')));
-
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+var server = app.listen(5000);
